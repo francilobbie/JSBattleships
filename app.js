@@ -180,11 +180,11 @@ function startGame() {
     } else {
       const allComputerBlocks = document.querySelectorAll('#computer div')
       allComputerBlocks.forEach(block => block.addEventListener('click', playerAttack))
+      playerTurn = true
+      turnDisplay.textContent = "Your turn"
+      infoDisplay.textContent = "Attack the computer!"
     }
 
-    playerTurn = true
-    turnDisplay.textContent = "Your turn"
-    infoDisplay.textContent = "Attack the computer!"
   }
 }
 startButton.addEventListener('click', startGame)
